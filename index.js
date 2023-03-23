@@ -36,10 +36,10 @@ for(let i=0;i<ele.length;i++){
 document.body.append(container);
 }
 function weather(event,lat,lang,cardid){
-  console.log(`card id: ${cardid}`);
+  
   event.preventDefault();//****it is used to prevent the default behavior of the button which is to submit a form or reload the page when clicked. 
-  console.log(`lat: ${lat} lang: ${lang}`);
-  let res1=fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lang}&appid=fe406ad9c6e7ec45ce2006c65ba7eb3f`);
+  
+  let res1=fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lang}&appid=fe406ad9c6e7ec45ce2006c65ba7eb3f`);
 res1.then((data1)=>data1.json())//packets of data
 .then((data2)=>foo1(data2,cardid))
 .catch((error)=>console.log(error));
@@ -50,8 +50,7 @@ function foo1(ele,cardid){
   bottomdiv.innerText="";
   let card=document.getElementById(`card${cardid}`);
 card.append(bottomdiv);
-console.log(`card id: ${cardid}`);
-console.log(ele.main.temp);
+
 
 let div=document.createElement("div");
 
