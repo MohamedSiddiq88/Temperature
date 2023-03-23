@@ -47,7 +47,7 @@ res1.then((data1)=>data1.json())//packets of data
 }
 let bottomdiv=document.createElement("div");
 function foo1(ele,cardid){
-  // bottomdiv.innerText="";
+  bottomdiv.innerText="";
   let card=document.getElementById(`card${cardid}`);
 card.append(bottomdiv);
 console.log(`card id: ${cardid}`);
